@@ -17,3 +17,24 @@ for (let i = 1; i <= 150; i++) {
 Promise.all(promises).then(results => {
     console.log(results);
 });
+
+const pokemon = results.map(data => ({
+    name: data.name,
+    id: data.id,
+    type: data.type,
+    image: data.sprites["front_default"],
+    type: data.type.map(type => type.type.name).join(", "),
+
+}));
+
+var displayPokemon = pokemon => {
+    const pokemon = results.map(sata => ({
+        name: data.name,
+        id: data.id,
+        type: data.type,
+        image: data.sprites["front_default"],
+        type: data.type.map(type => type.type.name).join(", "),
+
+    }));
+    displayPokemon(pokemon);
+};
